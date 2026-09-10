@@ -1,0 +1,16 @@
+on:
+  push:
+    branches:
+      ['**']
+  workflow_dispatch:
+
+jobs:
+  whoami:
+    runs-on: ubuntu-latest
+    steps:
+      - name: authenticate to AWS with OIDC
+        uses: aws_actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+      - name: show current aws identity
+        run: aws sts get-caller-identity
