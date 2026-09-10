@@ -20,3 +20,4 @@ jobs:
 
       - name: show current aws identity
         run: aws sts get-caller-identity
+
