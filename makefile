@@ -5,7 +5,7 @@ TAG ?= local
 export DOCKER_IMAGE_NAME
 export TAG
 .DEFAULT_GOAL := help
-.PHONY help lint build run test push down clean
+.PHONY: help lint build run test push down clean
 help:
 	@echo "make lint - Check Dockerfile"
 	@echo "make build - Build Docker image"
