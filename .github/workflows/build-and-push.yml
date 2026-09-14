@@ -34,7 +34,7 @@ jobs:
           echo "DOCKER_IMAGE_NAME=${ECR_REGISTRY}/${ECR_REPOSITORY}" > .env
           echo "TAG=${GITHUB_SHA}" >> .env
       - name: Lint Dockerfile
-        run: make Lint
+        run: make lint
       - name: Build Image
         run: make build
       - name: Run Container
