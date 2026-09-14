@@ -1,8 +1,7 @@
 on:
   push:
-    branches:
-      ['**']
-  workflow_dispatch:
+    paths:
+      - '.github/workflow/whoami.yml'
 
 permissions:
   id-token: write
